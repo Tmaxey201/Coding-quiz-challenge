@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
     <header> 
@@ -12,22 +13,46 @@
             <a href="/score.html">High Score</a>
             <span id='timer'>Time</span>
         </nav>
-        <h2>Try to answer the following questions within the time
-            Limit. Keep in mind the incorrect answers will penalize your score-time
-            by ten-seconds!</h2>
-        <button id="startButton">Start</button>
+        
     </header>
 
  <body>
-     <div id="quiz"></div>
-     <p id="question"></p>
+
+    <!-- This is the opening section -->
+    <div class="startBox">
+        <div class="startTitle">
+            <h2>Coding Quiz Challenge</h2>
+            </div>
+
+       <h4>
+            Try to answer the following questions within the time
+            Limit. Keep in mind the incorrect answers will penalize your score-time
+            By ten-seconds!
+       </h4>
+
+
+
+        <!-- start button -->
+        <button id="startButton">Start Quiz</button>
+    
+
+
+    </div>
+
+
+<!-- 
+    <div id="quiz"></div>
+     
+    
+    
+    <p id="question"></p>
 
      <div class="buttons">
          <button id="buttonn0"><span id="choice0"></span></button>
          <button id="buttonn1"><span id="choice1"></span></button>
          <button id="button2"><span id="choice2"></span></button>
          <button id="button3"><span id="choice3"></span></button>
-     </div>
+     </div> -->
      <script src="assets/script.js"></script> 
 </body>
 </html>
