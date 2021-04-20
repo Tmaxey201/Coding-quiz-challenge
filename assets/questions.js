@@ -1,59 +1,44 @@
 //created an array for the numbers, questions, options, and answers
 var questions = [
     {
-        numb: 1,
         question: "Commonly used Data Types do not include:",
-        answer: "Alerts"
-        options: [
-            "Strings",
-            "Booleans",
-            "Alerts",
-            "Numbers",
-        ]
+        choiceA:"Strings",
+        choiceB:"Booleans",
+        choiceC:"Alerts",
+        choiceD:"Numbers",
+        correct: "C"
     },
     {
-        numb: 2,
-        question: "The condition in an if/else statement is enclosed within _______.",
-        answer: "Parenthesis"
-        options: [
-            "Quotes",
-            "Curly brackets",
-            "Parenthesis",
-            "Square brackets",
-        ]
+         question: "The condition in an if/else statement is enclosed within _______.",
+         choiceA: "Quotes",
+         choiceB: "Curly brackets",
+         choiceC: "Parenthesis",
+         choiceD:  "Square brackets",
+       
     },
     {
-        numb: 3,
         question: "Arrays in JavaScript can be used to store _____.",
-        answer: "All the above"
-        options: [
-            "Numbers and strings",
-            "Other arrays",
-            "Booleans",
-            "All the above",
-        ]
+        choiceA:    "Numbers and strings",
+        choiceB: "Other arrays",
+        choiceC: "Booleans",
+        choiceD:  "All the above",
+        
     },
     {
-        numb: 4,
         question: "String values must be enclosed within _______",
-        answer: "Quotes"
-        options: [
-            "Commas",
-            "Curly brackets",
-            "Quotes",
-            "Parenthesis",
-        ]
+        choiceA:  "Commas",
+        choiceB: "Curly brackets",
+        choiceC: "Quotes",
+        choiceD: "Parenthesis",
+        
     },
     {
-        numb: 5,
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
-        answer: "Console.log"
-        options: [
-            "JavaScript",
-            "Terminal/bash",
-            "For loops",
-            "Console.log",
-        ]
+        choiceA:  "JavaScript",
+        choiceB: "Terminal/bash",
+        choiceC:  "For loops",
+        choiceD: "Console.log",
+      
     },
 
 

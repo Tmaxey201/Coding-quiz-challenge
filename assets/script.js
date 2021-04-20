@@ -1,4 +1,4 @@
-
+// created a timer to countdown when start button is pressed
 var startButton = document.getElementById("startButton");
 var timer = document.getElementById("timer");
 var secondsLeft = 75;
@@ -17,7 +17,7 @@ function setTime() {
 startButton.addEventListener('click', setTime);
 
 
-// hide start page and show quiz page
+// created an onclick function to hide start page and show quiz page when start button is pressed
 
 var button = document.getElementById('startButton');
 
@@ -32,3 +32,15 @@ button.onclick = function() {
 
 //pulling question,option,answers from the array
 
+var  lastquestionIndex = questions.legnth - 1
+let runningQuestionIndex = 0
+
+function showQuestion() {
+    let q = questions[runningQuestionIndex]
+    questions.innerHTML = "<p>" +q.question+  "</p>"
+    choiceA.innerHTML = q.choiceA
+    choiceB.innerHTML = q.choiceB
+    choiceC.innerHTML = q.choiceC
+    choiceD.innerHTML = q.choiceD
+
+}
