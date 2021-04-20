@@ -17,7 +17,7 @@ function setTime() {
 startButton.addEventListener('click', setTime);
 
 
-// hide start page
+// hide start page and show quiz page
 
 var button = document.getElementById('startButton');
 
@@ -28,14 +28,6 @@ button.onclick = function() {
 }
 
 
-
-
-// button.onclick = function() {
-//     var div = document.getElementById('quiz');
-//     if (div.style.display == 'none') {
-//         div.style.display == "block";
-//     }
-// }
 
 
 //pulling question,option,answers from the array
