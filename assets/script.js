@@ -21,17 +21,14 @@ startButton.addEventListener('click', setTime);
 
 var button = document.getElementById('startButton');
 
-button.onclick = function() {
-    var div = document.getElementById('startBox');
-    if (div.style.display !== 'none') {
-        div.style.display = 'none';
-    }
-    else {
-        div.style.display = 'block';
-    }
-};
 
-// show quiz page 
+button.onclick = function() {
+    document.getElementById('startBox').style.display = "none";
+    document.getElementById('quiz').style.display = "block";
+}
+
+
+
 
 // button.onclick = function() {
 //     var div = document.getElementById('quiz');

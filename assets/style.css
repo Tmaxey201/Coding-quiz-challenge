@@ -60,10 +60,6 @@ body {
     
 }
 
-.quiz {
-   
-  
-}
 
 .startTitle {
     margin-top: 80px;
@@ -81,3 +77,6 @@ body {
     place-items: center;
 }
 
+.quiz {
+    margin-top: 100px;
+}
