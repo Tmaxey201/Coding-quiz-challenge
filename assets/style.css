@@ -75,9 +75,11 @@ body {
     margin: 20px;
     display: grid;
     place-items: center;
+    
 }
 
-#quizButton {
+.buttons0, .buttons1, .buttons2, .buttons3 {
+    margin: 10px;
     padding: 5px 50px 5px;
     width: 200px;
     font-size: 15px;
@@ -90,7 +92,7 @@ body {
 
 }
 
-#quizButton:hover {
+.buttons0:hover, .buttons1:hover, .buttons2:hover, .buttons3:hover {
     opacity: .6;
     padding: 5px 50px 5px;
     width: 200px;

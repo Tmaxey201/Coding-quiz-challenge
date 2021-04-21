@@ -91,7 +91,10 @@ button.onclick = function() {
     showQuestions(0)
 }
 
-let que_count = 0
+let que_count = 0;
+
+const 
+
 
 
 //pulling question,option,answers from the array
@@ -101,10 +104,10 @@ function showQuestions(index){
     var que_text = document.querySelector(".que_text");
     var option_list = document.querySelector(".option_list");
     var que_tag = '<span>' + questions[index].question + '</span>';
-    var option_tag = '<div class="buttons">' + questions[index].options[0] + '<span></span></div>'
-                    + '<div class="buttons">' + questions[index].options[1] + '<span></span></div>'
-                    + '<div class="buttons">' + questions[index].options[2] + '<span></span></div>'
-                    + '<div class="buttons">' + questions[index].options[3] + '<span></span></div>'
+    var option_tag = '<div class="buttons0">' + questions[index].options[0] + '<span></span></div>'
+                    + '<div class="buttons1">' + questions[index].options[1] + '<span></span></div>'
+                    + '<div class="buttons2">' + questions[index].options[2] + '<span></span></div>'
+                    + '<div class="buttons3">' + questions[index].options[3] + '<span></span></div>'
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
 }
