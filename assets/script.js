@@ -93,16 +93,7 @@ button.onclick = function() {
 
 let que_count = 0;
 
-var buttonclick = document.getElementById('buttonclick');
 
-buttonclick.onclick = ()=>{
-    if(que_count < questions.length - 1){
-        que_count++;
-        showQuestions(que_count);
-            }else{
-              
-            }
-}
 
 
 
