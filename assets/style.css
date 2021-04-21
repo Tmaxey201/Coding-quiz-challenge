@@ -49,7 +49,7 @@ body {
     cursor: pointer;
 }
 
-.startTitle, .infoList, .info{
+.startTitle, .infoList, .info, .que_text{
     display: flex;           
     flex-direction: column;  
     justify-content: center; 
