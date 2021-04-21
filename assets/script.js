@@ -93,7 +93,16 @@ button.onclick = function() {
 
 let que_count = 0;
 
+var buttonclick = document.getElementById('buttonclick');
 
+buttonclick.onclick = ()=>{
+    if(que_count < questions.length - 1){
+        que_count++;
+        showQuestions(que_count);
+            }else{
+              
+            }
+}
 
 
 
@@ -103,11 +112,11 @@ let que_count = 0;
 function showQuestions(index){
     var que_text = document.querySelector(".que_text");
     var option_list = document.querySelector(".option_list");
-    var que_tag = '<span>' + questions[index].question + '</span>';
-    var option_tag = '<div class="buttons0">' + questions[index].options[0] + '<span></span></div>'
-                    + '<div class="buttons1">' + questions[index].options[1] + '<span></span></div>'
-                    + '<div class="buttons2">' + questions[index].options[2] + '<span></span></div>'
-                    + '<div class="buttons3">' + questions[index].options[3] + '<span></span></div>'
+    var que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
+    var option_tag = '<div class="buttons0" id="buttonclick">' + questions[index].options[0] + '<span></span></div>'
+                    + '<div class="buttons1" id="buttonclick">' + questions[index].options[1] + '<span></span></div>'
+                    + '<div class="buttons2" id="buttonclick">' + questions[index].options[2] + '<span></span></div>'
+                    + '<div class="buttons3" id="buttonclick">' + questions[index].options[3] + '<span></span></div>'
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
 }
