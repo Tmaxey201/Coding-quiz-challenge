@@ -63,8 +63,8 @@ var questions = [
 
 ];
 
-var counter = 1 
-var questions
+
+
 
 function setTime() {
     timerInterval = setInterval(function() {
@@ -85,16 +85,38 @@ startButton.addEventListener('click', setTime);
 var button = document.getElementById('startButton');
 
 
+var count = 0
 button.onclick = function() {
     document.getElementById('startBox').style.display = "none";
     document.getElementById('quiz').style.display = "block";
-    showQuestions(0)
-}
-
-let que_count = 0;
+    showQuestions(count)
+};
 
 
 
+var buttons0EL = document.querySelector("#button0");
+var buttons1EL = document.querySelector("#button1");
+var buttons2EL = document.querySelector("#button2");
+var buttons3EL = document.querySelector("#button3");
+console.log(buttons0EL)
+
+
+buttons0EL.addEventListener("click", function() {
+    count++; 
+    showQuestions(count);
+  });
+buttons1EL.addEventListener("click", function() {
+    count++; 
+    showQuestions(count);
+  });
+buttons2EL.addEventListener("click", function() {
+    count++; 
+    showQuestions(count);
+  });
+buttons3EL.addEventListener("click", function() {
+    count++; 
+    showQuestions(count);
+  });
 
 
 //pulling question,option,answers from the array
@@ -104,10 +126,18 @@ function showQuestions(index){
     var que_text = document.querySelector(".que_text");
     var option_list = document.querySelector(".option_list");
     var que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
-    var option_tag = '<div class="buttons0" id="buttonclick">' + questions[index].options[0] + '<span></span></div>'
-                    + '<div class="buttons1" id="buttonclick">' + questions[index].options[1] + '<span></span></div>'
-                    + '<div class="buttons2" id="buttonclick">' + questions[index].options[2] + '<span></span></div>'
-                    + '<div class="buttons3" id="buttonclick">' + questions[index].options[3] + '<span></span></div>'
-    que_text.innerHTML = que_tag;
-    option_list.innerHTML = option_tag;
+    // var option_tag = '<button class="buttons0">' + questions[index].options[0] + '<span></span></div>'
+    //                 + '<button class="buttons0">' + questions[index].options[1] + '<span></span></div>'
+    //                 + '<button class="buttons0">' + questions[index].options[2] + '<span></span></div>'
+    //                 + '<button class="buttons0">' + questions[index].options[3] + '<span></span></div>'
+    //when a button is clicked
+    //then que_count++
+    //then run the function startQuiz
+    document.querySelector("#button0").textContent = questions[index].options[0]
+    document.querySelector("#button1").textContent = questions[index].options[1]
+    document.querySelector("#button2").textContent = questions[index].options[2]
+    document.querySelector("#button3").textContent = questions[index].options[3]
+
+//     que_text.innerHTML = que_tag;
+//     option_list.innerHTML = option_tag;
 }
