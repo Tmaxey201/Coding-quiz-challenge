@@ -125,14 +125,8 @@ buttons3EL.addEventListener("click", function() {
 function showQuestions(index){
     var que_text = document.querySelector(".que_text");
     var option_list = document.querySelector(".option_list");
-    var que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
-    // var option_tag = '<button class="buttons0">' + questions[index].options[0] + '<span></span></div>'
-    //                 + '<button class="buttons0">' + questions[index].options[1] + '<span></span></div>'
-    //                 + '<button class="buttons0">' + questions[index].options[2] + '<span></span></div>'
-    //                 + '<button class="buttons0">' + questions[index].options[3] + '<span></span></div>'
-    //when a button is clicked
-    //then que_count++
-    //then run the function startQuiz
+   
+    document.querySelector("#que_text").textContent = questions[index].numb + ". " + questions[index].question
     document.querySelector("#button0").textContent = questions[index].options[0]
     document.querySelector("#button1").textContent = questions[index].options[1]
     document.querySelector("#button2").textContent = questions[index].options[2]
