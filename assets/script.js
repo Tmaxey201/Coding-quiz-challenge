@@ -1,8 +1,8 @@
-// created a timer to countdown when start button is pressed
+// created variables for timer
 var startButton = document.getElementById("startButton");
 var timer = document.getElementById("timer");
 var secondsLeft = 75;
-
+// created variable for array objects
 var questions = [
     {
         numb: 1,
@@ -64,7 +64,7 @@ var questions = [
 ];
 
 
-
+// created a timer function
 
 function setTime() {
     timerInterval = setInterval(function() {
@@ -94,6 +94,7 @@ button.onclick = function() {
 
 
 
+// created an eventlistener to cycle through array object for each button
 var buttons0EL = document.querySelector("#button0");
 var buttons1EL = document.querySelector("#button1");
 var buttons2EL = document.querySelector("#button2");
@@ -125,13 +126,22 @@ buttons3EL.addEventListener("click", function() {
 function showQuestions(index){
     var que_text = document.querySelector(".que_text");
     var option_list = document.querySelector(".option_list");
-   
     document.querySelector("#que_text").textContent = questions[index].numb + ". " + questions[index].question
     document.querySelector("#button0").textContent = questions[index].options[0]
     document.querySelector("#button1").textContent = questions[index].options[1]
     document.querySelector("#button2").textContent = questions[index].options[2]
     document.querySelector("#button3").textContent = questions[index].options[3]
-
-//     que_text.innerHTML = que_tag;
-//     option_list.innerHTML = option_tag;
 }
+
+// create a function to check if answer is correct or wrong 
+
+
+buttons0EL.addEventListener("click", function() {
+    if(questions.answer){
+
+    }else{
+        secondsLeft = secondsLeft -10
+    }
+    
+  });
+
