@@ -59,7 +59,7 @@ var questions = [
             "Console.log",
         ]
     },
-
+    
 
 ];
 
@@ -74,6 +74,12 @@ function setTime() {
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
         }
+
+        if (secondsLeft === 0) {
+            alert('Time is up! YOU LOSE!');
+            clearInterval(counter);
+          }
+
     }, 1000)
 }
 
@@ -99,12 +105,13 @@ var buttons0EL = document.querySelector("#button0");
 var buttons1EL = document.querySelector("#button1");
 var buttons2EL = document.querySelector("#button2");
 var buttons3EL = document.querySelector("#button3");
-console.log(buttons0EL)
+
 
 
 buttons0EL.addEventListener("click", function() {
     count++; 
     showQuestions(count);
+   
   });
 buttons1EL.addEventListener("click", function() {
     count++; 
@@ -133,15 +140,9 @@ function showQuestions(index){
     document.querySelector("#button3").textContent = questions[index].options[3]
 }
 
+
+// create end of quiz function
+
+
 // create a function to check if answer is correct or wrong 
-
-
-buttons0EL.addEventListener("click", function() {
-    if(questions.answer){
-
-    }else{
-        secondsLeft = secondsLeft -10
-    }
-    
-  });
 
