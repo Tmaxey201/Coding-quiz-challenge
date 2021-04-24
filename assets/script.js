@@ -10,11 +10,11 @@ var questions = [
     {
         numb: 1,
         question: "Commonly used Data Types do not include:",
-        answer: "button0",
+        answer: "button2",
         options: [
-            "Alerts",
-            "Booleans",
             "Strings",
+            "Booleans",
+            "Alerts",
             "Numbers",
         ]
     },
@@ -154,8 +154,7 @@ function showQuestions(index){
 
 function checkAnswer(id) {
     if (id === questions[count].answer) {
-        audio.play();
-
+       
     } else {
         secondsLeft = secondsLeft - 10
     }
