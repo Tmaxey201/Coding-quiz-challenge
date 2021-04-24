@@ -15,6 +15,17 @@ body {
     font-size: xx-large;
     font-weight: 900;
 }
+.spanTitle2 {
+    font-size: x-large;
+    margin-top: 100px;
+    display: grid;
+    place-items: center;
+
+}
+.info2 {
+    font-size: medium;
+    font-weight: 500 ;
+}
 
 #startButton {
   
@@ -49,7 +60,7 @@ body {
     cursor: pointer;
 }
 
-.startTitle, .infoList, .info, .que_text{
+.startTitle, .infoList, .info, .que_text, .endPage{
     display: flex;           
     flex-direction: column;  
     justify-content: center; 
@@ -126,4 +137,10 @@ body {
     color: rgb(0, 172, 0);
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 900;
+}
+
+#timer2 {
+    font-size: x-large;
+  
+    
 }

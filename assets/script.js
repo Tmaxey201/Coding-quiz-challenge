@@ -73,14 +73,10 @@ function setTime() {
     timerInterval = setInterval(function() {
         secondsLeft--;
         timer.textContent= "Time:" + secondsLeft;
-
-        if(secondsLeft === 0) {
-            clearInterval(timerInterval);
-        }
-
-        if (secondsLeft === 0) {
+        timer2.textContent= secondsLeft + ".";
+        if (secondsLeft === 0 || count > 5) {
             alert('Time is up!');
-            clearInterval(counter);
+            clearInterval(timerInterval);
           }
           
     }, 1000)
@@ -112,27 +108,44 @@ var buttons3EL = document.querySelector("#button3");
 
 
 buttons0EL.addEventListener("click", function(event) {
-    console.log('event ', event.target.id)
-    checkAnswer(event.target.id)
     count++; 
-    showQuestions(count);
+    if (count < 5) {
+        checkAnswer(event.target.id)
+        showQuestions(count);
+    } else {
+        endQuiz()
+    }
    
   });
 buttons1EL.addEventListener("click", function(event) {
-    console.log('event ', event.target.id)
-    checkAnswer(event.target.id) 
-       count++; 
-    showQuestions(count);
+    count++; 
+    if (count < 5) {
+        checkAnswer(event.target.id)
+        showQuestions(count);
+    } else {
+        endQuiz()
+    }
+   
   });
 buttons2EL.addEventListener("click", function(event) {
-    checkAnswer(event.target.id)
     count++; 
-    showQuestions(count);
+    if (count < 5) {
+        checkAnswer(event.target.id)
+        showQuestions(count);
+    } else {
+        endQuiz()
+    }
+   
   });
 buttons3EL.addEventListener("click", function(event) {
-    checkAnswer(event.target.id)
     count++; 
-    showQuestions(count);
+    if (count < 5) {
+        checkAnswer(event.target.id)
+        showQuestions(count);
+    } else {
+        endQuiz()
+    }
+   
   });
   
 
@@ -141,12 +154,13 @@ buttons3EL.addEventListener("click", function(event) {
 
 
 function showQuestions(index){
+    console.log(questions[index].numb)
     document.querySelector("#que_text").textContent = questions[index].numb + ". " + questions[index].question
     document.querySelector("#button0").textContent = questions[index].options[0]
     document.querySelector("#button1").textContent = questions[index].options[1]
     document.querySelector("#button2").textContent = questions[index].options[2]
     document.querySelector("#button3").textContent = questions[index].options[3]
-    if (count === question.numb.length) {
+    if (count === questions[index].numb) {
         endQuiz()
     }
 }
@@ -178,11 +192,10 @@ function checkAnswer(id) {
 
 
     function endQuiz(){
-        clearInterval(secondsLeft);
+        clearInterval(timerInterval);
         document.querySelector('.endPage').style.display = "block";
+        document.getElementById('quiz').style.display = "none";
         
     }
-// function gameOver() {
-//     if (questions[5] >= 5 || secondsLeft == 0);
-//     console.log(hellooww)
-// }
+
+    
