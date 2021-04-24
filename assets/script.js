@@ -82,7 +82,7 @@ function setTime() {
             alert('Time is up!');
             clearInterval(counter);
           }
-
+          
     }, 1000)
 }
 
@@ -134,31 +134,55 @@ buttons3EL.addEventListener("click", function(event) {
     count++; 
     showQuestions(count);
   });
+  
 
 
 //pulling question,option,answers from the array
 
 
 function showQuestions(index){
-    var que_text = document.querySelector(".que_text");
-    var option_list = document.querySelector(".option_list");
     document.querySelector("#que_text").textContent = questions[index].numb + ". " + questions[index].question
     document.querySelector("#button0").textContent = questions[index].options[0]
     document.querySelector("#button1").textContent = questions[index].options[1]
     document.querySelector("#button2").textContent = questions[index].options[2]
     document.querySelector("#button3").textContent = questions[index].options[3]
+    if (count === question.numb.length) {
+        endQuiz()
+    }
 }
 
 
-// create end of quiz function
+// create a function to check if answer is correct or wrong 
 
 function checkAnswer(id) {
     if (id === questions[count].answer) {
+        document.getElementById('right').style.display = "block";
+            
+        setTimeout(() => {  document.getElementById('right').style.display = "none"; }, 1000);
        
     } else {
-        secondsLeft = secondsLeft - 10
+        secondsLeft = secondsLeft - 10;
+    
+            document.getElementById('wrong').style.display = "block";
+            
+            setTimeout(() => {  document.getElementById('wrong').style.display = "none"; }, 1000);
+            
     }
+   
+};
 
-}
-// create a function to check if answer is correct or wrong 
+//  create function to end game
+// stop the timer
+// change final quiz question page to end page with results showing
 
+
+
+    function endQuiz(){
+        clearInterval(secondsLeft);
+        document.querySelector('.endPage').style.display = "block";
+        
+    }
+// function gameOver() {
+//     if (questions[5] >= 5 || secondsLeft == 0);
+//     console.log(hellooww)
+// }
