@@ -2,23 +2,26 @@
 var startButton = document.getElementById("startButton");
 var timer = document.getElementById("timer");
 var secondsLeft = 75;
+
+ 
+ 
 // created variable for array objects
 var questions = [
     {
         numb: 1,
         question: "Commonly used Data Types do not include:",
-        answer: "Alerts",
+        answer: "button0",
         options: [
-            "Strings",
-            "Booleans",
             "Alerts",
+            "Booleans",
+            "Strings",
             "Numbers",
         ]
     },
     {
         numb: 2,
         question: "The condition in an if/else statement is enclosed within _______.",
-        answer: "Parenthesis",
+        answer: "button2",
         options: [
             "Quotes",
             "Curly brackets",
@@ -29,7 +32,7 @@ var questions = [
     {
         numb: 3,
         question: "Arrays in JavaScript can be used to store _____.",
-        answer: "All the above",
+        answer: "button3",
         options: [
             "Numbers and strings",
             "Other arrays",
@@ -40,7 +43,7 @@ var questions = [
     {
         numb: 4,
         question: "String values must be enclosed within _______",
-        answer: "Quotes",
+        answer: "button2",
         options: [
             "Commas",
             "Curly brackets",
@@ -51,7 +54,7 @@ var questions = [
     {
         numb: 5,
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
-        answer: "Console.log",
+        answer: "button3",
         options: [
             "JavaScript",
             "Terminal/bash",
@@ -76,7 +79,7 @@ function setTime() {
         }
 
         if (secondsLeft === 0) {
-            alert('Time is up! YOU LOSE!');
+            alert('Time is up!');
             clearInterval(counter);
           }
 
@@ -108,20 +111,26 @@ var buttons3EL = document.querySelector("#button3");
 
 
 
-buttons0EL.addEventListener("click", function() {
+buttons0EL.addEventListener("click", function(event) {
+    console.log('event ', event.target.id)
+    checkAnswer(event.target.id)
     count++; 
     showQuestions(count);
    
   });
-buttons1EL.addEventListener("click", function() {
+buttons1EL.addEventListener("click", function(event) {
+    console.log('event ', event.target.id)
+    checkAnswer(event.target.id) 
+       count++; 
+    showQuestions(count);
+  });
+buttons2EL.addEventListener("click", function(event) {
+    checkAnswer(event.target.id)
     count++; 
     showQuestions(count);
   });
-buttons2EL.addEventListener("click", function() {
-    count++; 
-    showQuestions(count);
-  });
-buttons3EL.addEventListener("click", function() {
+buttons3EL.addEventListener("click", function(event) {
+    checkAnswer(event.target.id)
     count++; 
     showQuestions(count);
   });
@@ -143,6 +152,14 @@ function showQuestions(index){
 
 // create end of quiz function
 
+function checkAnswer(id) {
+    if (id === questions[count].answer) {
+        audio.play();
 
+    } else {
+        secondsLeft = secondsLeft - 10
+    }
+
+}
 // create a function to check if answer is correct or wrong 
 
