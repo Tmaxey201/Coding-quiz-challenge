@@ -32,7 +32,7 @@ var questions = [
     {
         numb: 3,
         question: "Arrays in JavaScript can be used to store _____.",
-        answer: "button3",
+        answer: "button2",
         options: [
             "Numbers and strings",
             "Other arrays",
@@ -43,7 +43,7 @@ var questions = [
     {
         numb: 4,
         question: "String values must be enclosed within _______",
-        answer: "button2",
+        answer: "button3",
         options: [
             "Commas",
             "Curly brackets",
@@ -54,7 +54,7 @@ var questions = [
     {
         numb: 5,
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
-        answer: "button3",
+        answer: "button2",
         options: [
             "JavaScript",
             "Terminal/bash",
@@ -154,7 +154,7 @@ buttons3EL.addEventListener("click", function(event) {
 
 
 function showQuestions(index){
-    console.log(questions[index].numb)
+    
     document.querySelector("#que_text").textContent = questions[index].numb + ". " + questions[index].question
     document.querySelector("#button0").textContent = questions[index].options[0]
     document.querySelector("#button1").textContent = questions[index].options[1]
