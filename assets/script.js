@@ -45,21 +45,21 @@ var questions = [
         question: "String values must be enclosed within _______",
         answer: "button3",
         options: [
-            "Commas",
-            "Curly brackets",
             "Quotes",
+            "Curly brackets",
+            "Commas",
             "Parenthesis",
         ]
     },
     {
         numb: 5,
-        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
-        answer: "button2",
+        question: "What is better, Cats or Dogs? ",
+        answer: "button0",
         options: [
-            "JavaScript",
-            "Terminal/bash",
-            "For loops",
-            "Console.log",
+            "Dogs",
+            "Dogs",
+            "Dogs",
+            "Dogs",
         ]
     },
     
@@ -109,7 +109,7 @@ var buttons3EL = document.querySelector("#button3");
 
 buttons0EL.addEventListener("click", function(event) {
     count++; 
-    if (count < 5) {
+    if (count < 6) {
         checkAnswer(event.target.id)
         showQuestions(count);
     } else {
@@ -160,9 +160,7 @@ function showQuestions(index){
     document.querySelector("#button1").textContent = questions[index].options[1]
     document.querySelector("#button2").textContent = questions[index].options[2]
     document.querySelector("#button3").textContent = questions[index].options[3]
-    if (count === questions[index].numb) {
-        endQuiz()
-    }
+    
 }
 
 
@@ -175,7 +173,7 @@ function checkAnswer(id) {
         setTimeout(() => {  document.getElementById('right').style.display = "none"; }, 1000);
        
     } else {
-        secondsLeft = secondsLeft - 10;
+        secondsLeft = secondsLeft - 15;
     
             document.getElementById('wrong').style.display = "block";
             
