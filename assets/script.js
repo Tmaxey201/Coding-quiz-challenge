@@ -195,8 +195,36 @@ function checkAnswer(id) {
         document.querySelector('.endPage').style.display = "block";
         document.getElementById('quiz').style.display = "none";
         
-    }
+    };
 
-    
+// create back button for high score list
+function goBack() {
+    window.history.back();
+  }
+      
 
 // create method of capturing, storing, and resetting highscores 
+
+   
+    var inputEL = document.getElementById("inputBox").value;
+    document.querySelector("#liOne").textContent = 
+    document.querySelector("#liTwo").textContent = questions[index].options[1]
+    document.querySelector("#liThree").textContent = questions[index].options[2]
+    document.querySelector("#liFour").textContent = questions[index].options[3]
+    document.querySelector("#liFive").textContent = questions[index].options[3]
+    
+
+
+
+// var inputEL = [{name: 'Tom', score: 50}]
+
+inputEL.push({name:'Tim', score: 55})
+inputEL = JSON.stringify(inputEL)
+localStorage.setItem('inputEL',inputEL)
+
+
+// // grab
+
+// var retrieved = localStorage.getItem('inputEL')
+// retrieved = JSON.parse(retrieved)
+// console.log(retrieved)
