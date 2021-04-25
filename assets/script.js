@@ -2,6 +2,7 @@
 var startButton = document.getElementById("startButton");
 var timer = document.getElementById("timer");
 var secondsLeft = 75;
+var highScoreInput = document.getElementById('inputBox').value
 
  
  
@@ -197,3 +198,5 @@ function checkAnswer(id) {
     }
 
     
+
+// create method of capturing, storing, and resetting highscores 
