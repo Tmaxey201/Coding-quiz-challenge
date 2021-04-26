@@ -206,21 +206,41 @@ function goBack() {
 // create method of capturing, storing, and resetting highscores 
 
    
-    var inputEL = document.getElementById("inputBox").value;
-    document.querySelector("#liOne").textContent = 
-    document.querySelector("#liTwo").textContent = questions[index].options[1]
-    document.querySelector("#liThree").textContent = questions[index].options[2]
-    document.querySelector("#liFour").textContent = questions[index].options[3]
-    document.querySelector("#liFive").textContent = questions[index].options[3]
+   var inputScore = document.querySelector('.info2');
+   var  getName = document.querySelector('#inputBox');
+   var submitBTN = document.querySelector('.submitName');
+   var forgetBtn = document.querySelector('.clearHS');
+   var finalScore = document.getElementById('timer2')
+   submitBTN.addEventListener('click', function() {
+       localStorage.setItem('name', getName.value);
+       localStorage.setItem('score', );
+       console.log(highScore)
+
+   });
+
+   function myClearFunction() {
+   localStorage.clear();
+  }
+
+   
+
+
+   
+
+    // document.querySelector("#liOne").textContent = 
+    // document.querySelector("#liTwo").textContent = 
+    // document.querySelector("#liThree").textContent = 
+    // document.querySelector("#liFour").textContent = 
+    // document.querySelector("#liFive").textContent = 
     
 
 
 
 // var inputEL = [{name: 'Tom', score: 50}]
 
-inputEL.push({name:'Tim', score: 55})
-inputEL = JSON.stringify(inputEL)
-localStorage.setItem('inputEL',inputEL)
+// inputEL.push({name:'Tim', score: 55})
+// inputEL = JSON.stringify(inputEL)
+// localStorage.setItem('inputEL',inputEL)
 
 
 // // grab
