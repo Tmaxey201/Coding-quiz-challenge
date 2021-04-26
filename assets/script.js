@@ -225,3 +225,11 @@ function goBack() {
     var retrieved = localStorage.getItem('name');
   document.getElementById("finalscores").innerHTML = retrieved;
 }
+
+var pest = {name: 'Tom', score: 95}
+
+pest = JSON.stringify(pest)
+localStorage.setItem('pest', pest)
+var retrieved = localStorage.getItem('pest')
+retrieved = JSON.parse(retrieved)
+console.log(retrieved)
