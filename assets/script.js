@@ -2,7 +2,7 @@
 var startButton = document.getElementById("startButton");
 var timer = document.getElementById("timer");
 var secondsLeft = 75;
-var highScoreInput = document.getElementById('inputBox').value
+
 
  
  
@@ -222,22 +222,12 @@ function goBack() {
    localStorage.clear();
   }
 
-  var aValue = storage.getItem('name');
-  var bValue = storage.getItem('score');
-
-  console.log(aValue)
- 
-   
-
-    // document.querySelector("#liOne").textContent = 
-    // document.querySelector("#liTwo").textContent = 
-    // document.querySelector("#liThree").textContent = 
-    // document.querySelector("#liFour").textContent = 
-    // document.querySelector("#liFive").textContent = 
+    function myhsFunction() {
+        var retrieved = localStorage.getItem('name');
+      document.getElementById("finalscores").innerHTML = retrieved;
+    }
+  
     
-
-
-
 // var inputEL = [{name: 'Tom', score: 50}]
 
 // inputEL.push({name:'Tim', score: 55})
@@ -247,6 +237,6 @@ function goBack() {
 
 // // grab
 
-// var retrieved = localStorage.getItem('inputEL')
+var retrieved = localStorage.getItem('name')
 // retrieved = JSON.parse(retrieved)
-// console.log(retrieved)
+console.log(retrieved)
