@@ -1,8 +1,7 @@
-// created variables for timer
 var startButton = document.getElementById("startButton");
 var timer = document.getElementById("timer");
 var secondsLeft = 75;
-
+var highScoreInput = document.getElementById('inputBox').value
 
  
  
@@ -214,7 +213,7 @@ function goBack() {
    submitBTN.addEventListener('click', function() {
        localStorage.setItem('name', getName.value);
        localStorage.setItem('score', );
-       
+       console.log(highScore)
 
    });
 
@@ -222,21 +221,7 @@ function goBack() {
    localStorage.clear();
   }
 
-    function myhsFunction() {
-        var retrieved = localStorage.getItem('name');
-      document.getElementById("finalscores").innerHTML = retrieved;
-    }
-  
-    
-// var inputEL = [{name: 'Tom', score: 50}]
-
-// inputEL.push({name:'Tim', score: 55})
-// inputEL = JSON.stringify(inputEL)
-// localStorage.setItem('inputEL',inputEL)
-
-
-// // grab
-
-var retrieved = localStorage.getItem('name')
-// retrieved = JSON.parse(retrieved)
-console.log(retrieved)
+  function myhsFunction() {
+    var retrieved = localStorage.getItem('name');
+  document.getElementById("finalscores").innerHTML = retrieved;
+}
