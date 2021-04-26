@@ -214,7 +214,7 @@ function goBack() {
    submitBTN.addEventListener('click', function() {
        localStorage.setItem('name', getName.value);
        localStorage.setItem('score', );
-       console.log(highScore)
+       
 
    });
 

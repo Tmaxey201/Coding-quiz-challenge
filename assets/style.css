@@ -170,3 +170,13 @@ body {
     margin: 3px;
     width: 140px;
 }
+
+.list {
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 70px;
+}
+#finalscores {
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
