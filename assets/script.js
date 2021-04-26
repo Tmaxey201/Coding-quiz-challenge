@@ -222,9 +222,11 @@ function goBack() {
    localStorage.clear();
   }
 
-   
+  var aValue = storage.getItem('name');
+  var bValue = storage.getItem('score');
 
-
+  console.log(aValue)
+ 
    
 
     // document.querySelector("#liOne").textContent = 
